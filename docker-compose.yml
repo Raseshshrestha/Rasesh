@@ -1,0 +1,13 @@
+# MediaWiki with MariaDB
+#
+# Access via "http://localhost:8080"
+version: '3'
+services:
+  mediawiki:
+    image: mediawiki
+    restart: always
+    ports:
+      - 8081:80
+    volumes:
+      - /var/www/html/images
+      #- ./LocalSettings.php:/var/www/html/LocalSettings.php
